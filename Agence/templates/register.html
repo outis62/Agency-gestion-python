@@ -1,0 +1,40 @@
+{% extends "base.html"%}
+
+{% block content %}
+
+<div class="container">
+    <div class="row mt-5 mb-5 shadow">
+        <div class="col-lg-6 shadow p-4">
+            <h3>Créer votre compte</h3>
+            <form>
+                <div class="form-group">
+                    <label for="exampleInputText1">Nom</label>
+                    <input type="text" class="form-control" id="exampleInputText1" aria-describedby="textHelp">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputText1">Prenom</label>
+                    <input type="text" class="form-control" id="exampleInputText1" aria-describedby="textHelp">
+                  </div>
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Email</label>
+                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                  <small id="emailHelp" class="form-text text-muted">Nous n'allons jamais partager votre email</small>
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Mot de passe</label>
+                  <input type="password" class="form-control" id="exampleInputPassword1">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Confirmer mot de passe</label>
+                    <input type="password" class="form-control" id="exampleInputPassword1">
+                  </div>
+                <button type="submit" class="btn btn-primary">S'inscrire</button>
+              </form>
+        </div>
+        <div class="col-lg-6">
+            <img src="https://www.yonder.fr/sites/default/files/styles/lg-insert/public/contenu/destinations/Bulgari-Hotel-Paris_Penthouse%20Chambre%20(2).jpeg?itok=xG9_1OWl" class="img-fluid img-responsive" alt="">
+        </div>
+    </div>
+</div>
+
+{% endblock %}
