@@ -6,15 +6,16 @@
     <div class="row mt-5 mb-5 shadow">
         <div class="col-lg-6 shadow p-4">
             <h3>Connexion</h3>
-            <form>
+            <form method="post" action="{% url 'login' %}">
+            {% csrf_token %}
                 <div class="form-group">
-                  <label for="exampleInputEmail1">Email</label>
-                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                  <label for="exampleInputEmail1">Nom d'utilisateur</label>
+                  <input type="text" class="form-control" name="username" id="exampleInputEmail1" aria-describedby="emailHelp" required>
                   <small id="emailHelp" class="form-text text-muted">Nous n'allons jamais partager votre email</small>
                 </div>
                 <div class="form-group">
                   <label for="exampleInputPassword1">Mot de passe</label>
-                  <input type="password" class="form-control" id="exampleInputPassword1">
+                  <input type="password" class="form-control" name="password" id="exampleInputPassword1" required>
                 </div>
                 <div class="form-group form-check">
                   <input type="checkbox" class="form-check-input" id="exampleCheck1">
@@ -22,6 +23,7 @@
                 </div>
                 <button type="submit" class="btn btn-primary">Se connecter</button>
               </form>
+              <p class="link">Pas encore inscrit ? <a href="{% url 'register' %}">S'inscrire</a></p>
         </div>
         <div class="col-lg-6">
             <img src="https://www.yonder.fr/sites/default/files/styles/lg-insert/public/contenu/destinations/Bulgari-Hotel-Paris_Penthouse%20Chambre%20(2).jpeg?itok=xG9_1OWl" class="img-fluid img-responsive" alt="">
