@@ -36,4 +36,4 @@ def deconnexion(request):
 
 @login_required
 def welcome(request):
-    return render(request, 'welcome.html')
+    return render(request, 'dashboard/base.html')
