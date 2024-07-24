@@ -1,17 +1,48 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div class="container">
+<!-- <div class="container">
     <div class="row mt-5 mb-5 shadow">
         <div class="col-lg-6 shadow p-4">
             <h3>Créer votre compte</h3>
             <form method="post" action="{% url 'register' %}">
                 {% csrf_token %}
-                <h1>Inscription</h1>
                 {{ form.as_p }}
                 <button type="submit" class="btn btn-primary">S'inscrire</button>
             </form>
             <p class="link">Déjà inscrit ? <a href="{% url 'login' %}">Se connecter</a></p>
+        </div>
+        <div class="col-lg-6">
+            <img src="https://www.yonder.fr/sites/default/files/styles/lg-insert/public/contenu/destinations/Bulgari-Hotel-Paris_Penthouse%20Chambre%20(2).jpeg?itok=xG9_1OWl" class="img-fluid img-responsive" alt="">
+        </div>
+    </div>
+</div> -->
+
+<div class="container">
+    <div class="row mt-5 mb-5 shadow">
+        <div class="col-lg-6 shadow p-4">
+            <h3>Créer un compte</h3>
+            <form method="post" action="{% url 'register' %}">
+            {% csrf_token %}
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Nom d'utilisateur</label>
+                  <input type="text" class="form-control" name="username" placeholder="Renseigner votre nom d'utilisateur" id="exampleInputEmail1" aria-describedby="emailHelp" required>
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Mot de passe</label>
+                  <input type="password" class="form-control" name="password" placeholder="Renseigner votre mot de passe" id="exampleInputPassword1" required>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Confirmer mot de passe</label>
+                    <input type="password" class="form-control" name="confirmpassword" placeholder="Confirmer votre mot de passe" id="exampleInputPassword1" required>
+                  </div>
+                <div class="form-group form-check">
+                  <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                  <label class="form-check-label" for="exampleCheck1">Se souvenir de moi</label>
+                </div>
+                <button type="submit" class="btn btn-primary">S'inscrire</button>
+              </form>
+              <p class="link">Déjà inscrit ? <a href="{% url 'login' %}">Se connecter</a></p>
         </div>
         <div class="col-lg-6">
             <img src="https://www.yonder.fr/sites/default/files/styles/lg-insert/public/contenu/destinations/Bulgari-Hotel-Paris_Penthouse%20Chambre%20(2).jpeg?itok=xG9_1OWl" class="img-fluid img-responsive" alt="">
